@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    	<title>{Title}</title>
+        <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/lwohuuu/msLlz8dfr/html5reset-1.6.1.css">
+        <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/lwohuuu/JDAlzacxw/theme.css">
+        
+        <style>
+        	{CustomCSS}
+        </style>
+        
+	</head>
+	
+	<body>
+		<div id="left">
+			<header>
+                <h1><a href="/">{Title}</a></h1>
+			</header>
+            <div id="description"><img src="{PortraitURL-64}" style="margin-right:5px;"align="left" />{Description}</div>
+            <hr style="width:210px;">
+            <iframe frameborder="0" scrolling="no" width="210px" height="149" src="http://www.tumblr.com/ask_form/orangeaxolotl.tumblr.com" style="background-color:transparent; overflow:hidden;" id="ask_form"></iframe>
+		</div> <!-- Left -->
+		
+		<div id="right">
+			<div id="posts">{block:Posts}
+				
+				<div class="text post">{block:Text}
+
+					<div class="title"><a href="{Permalink}">{Title}</a></div>
+					<ul class="meta">
+						<li>{block:Date}{DayOfMonthWithZero}/{MonthNumberWithZero}/{Year} at {24HourWithZero}:{Minutes}{/block:Date}</li>
+						<li>{block:HasTags}&#124; Tagged:{block:Tags} #<a href="{TagURLChrono}">{Tag}</a>.{/block:Tags}{/block:HasTags}</li>
+					</ul>
+					<div style="clear:both;height:0">&nbsp;</div>
+					<div class="text_block">{Body}</div>
+                    <div style="clear:both;height:0">&nbsp;</div>
+                    <hr>
+                    
+                    {block:PostNotes}{PostNotes}{/block:PostNotes}
+				{/block:Text}</div>
+				
+			{/block:Posts}</div><!-- Posts -->
+			
+			<div id="twitter_wrap">
+            	<div id="twitter_title"><a href="http://wwww.twitter.com/#!/orangeaxolotl/">Twitter</a></div>
+            	<ul id="twitter_update_list"><li>Twitter feed loading</li></ul>
+            	<div id="follow"><a href="http://wwww.twitter.com/#!/orangeaxolotl/">Follow me on Twitter</a></div>
+            </div><!-- Twitter -->
+
+            <footer>
+				<div id="pagination">
+					{block:Pagination}
+					{block:NextPage}<a href="{NextPage}">← Previous Posts</a>{/block:NextPage}
+					Page {CurrentPage} of {TotalPages}
+					{block:PreviousPage}<a href="{PreviousPage}">Less-Previous Posts →</a>{/block:PreviousPage}
+					{/block:Pagination}
+				</div>
+				
+				<div id="copyleft"><span style="-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); -khtml-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); display: inline-block;">&copy;</span> {CopyrightYears} &#60;--- Copyleft. In case you're using an outdated browser. **caugh**IE**cough**</div>
+            </footer>
+            
+		</div><!-- right -->
+            
+        <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+		<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/orangeaxolotl.json?callback=twitterCallback2&count=10"></script>
+	</body>
+</html>
